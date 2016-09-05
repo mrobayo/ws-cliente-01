@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by janito (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="historiaClinicaType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="8"/>
+			<xs:pattern value="[1-2][0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="pacienteType">
+		<xs:all>
+			<xs:element name="primerNombre"/>
+			<xs:element name="apelidoPaterno"/>
+			<xs:element name="apellidoMaterno"/>
+		</xs:all>
+		<xs:attribute name="historiaClinica" type="historiaClinicaType" use="required"/>
+		<xs:attribute name="fechaCreacion"/>
+	</xs:complexType>
+	<xs:element name="paciente" type="pacienteType"/>
+</xs:schema>
