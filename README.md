@@ -6,3 +6,9 @@
   
 # taller 03 XML y Esquema XSD
   definicion de un esquema en XSD
+
+# taller 04 WSDL
+  definicion de un documento WSDL
+  
+# taller 05 XPATH
+  transformacion XML y XPATH
